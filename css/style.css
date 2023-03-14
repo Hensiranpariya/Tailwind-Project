@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.social a{
+    writing-mode: vertical-rl;
+}
+.hover::after{
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(128, 128, 128, 0.514);
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.5s linear;
+}
+.hover:hover::after{
+    width: 100%;
+    border-radius: 30px;
+}
