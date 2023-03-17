@@ -1,18 +1,12 @@
-// module.exports = {
-//     theme: {
-//       extend: {
-//         backgroundImage: {
-//           'hero-pattern': "url('../images/banner.jpg')",
-//         }
-//       }
-//     }
-//   }
-module.exports = {
+
+tailwind.config = {
     theme: {
-     extend :{
-        fontSize: {
-            'text-10xl' : '160px'
-        }
-     }
-    }
+      extend : {
+        colors: {
+            'purple': '#3f3cbb',
+            'midnight': '#121063',
+            'grey' : '#888888',
+          },
+      }
+    },
   }

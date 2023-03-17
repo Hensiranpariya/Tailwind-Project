@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+.dropdown:hover .dropdown-menu{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 .social a{
     writing-mode: vertical-rl;
 }
@@ -11,8 +16,8 @@
     position: absolute;
     top: -12px;
     left: 0;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     background-color: rgba(128, 128, 128, 0.514);
     border-radius: 50%;
     z-index: -1;
@@ -21,4 +26,31 @@
 .hover:hover::after{
     width: 100%;
     border-radius: 30px;
+}
+.move{
+    animation: scroll 25s linear infinite;
+}
+@keyframes scroll{
+    to{
+        transform: translate(-100%);
+    }
+}
+.strok{
+    color: transparent;
+    -webkit-text-stroke: solid;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 2px;
+    animation: strok 35s linear infinite;
+
+}
+@keyframes strok{
+    to{
+        transform: translate(-100%);
+    }
+}
+.text{
+    color: transparent;
+    -webkit-text-stroke: solid;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 2px;
 }

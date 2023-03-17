@@ -8,9 +8,16 @@
   <title>Document</title>
   <link rel="stylesheet" href="rimix/remixicon.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.0/swiper-bundle.css"
+    integrity="sha512-6HEJkWR1zijwiB3XwQE9eHjDBJmA/Fcl88LlxMba1EC1kakrlXOA14rJmQujhDkTQ6/TSXmGo0w57GbnZ2FSdQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css" type="text/css">
+  <link rel="stylesheet" href="css/slick.css">
 </head>
 
-<body class="bg-black">
+
+<body>
 
   <!-- HEADER  -->
   <header class="absolute z-50 w-full py-5">
@@ -19,92 +26,643 @@
         <div class="logo">
           <a href="#"><img src="images/logo-1.png" alt="" width="60px"></a>
         </div>
-        <nav>
-          <ul class="flex">
-            <li class="mx-6 text-sm"><a href="#" class="text-orange-500 flex items-center tracking-widest "><span
+        <nav class="top-full left-0 bg-black xl:bg-transparent w-full absolute xl:static hidden xl:block">
+          <ul class="flex-col xl:flex-row flex justify-center">
+            <li class="mx-6 text-sm"><a href="#" class="text-orange-500 flex items-center tracking-widest py-5 "><span
                   class="w-1.5 h-1.5 border border-orange-500 rounded-full mr-2"></span> HOME<i
                   class="ri-arrow-down-s-line ml-1"></i></a></li>
+            <li class="mx-6 text-sm relative dropdown">
+              <a href="#" class="text-white flex items-center tracking-widest py-5 hover:text-orange-500"><span class="w-1.5 h-1.5 border border-white rounded-full mr-2"></span> PAGES<i class="ri-arrow-down-s-line ml-1"></i></a>
+              <div class="dropdown-menu absolute top-full left-0 bg-black text-white w-[200px] p-3 opacity-0 duration-500 invisible translate-y-[20px] rounded-lg">
+                <ul>
+                  <li class="my-3"><a href="#">About us</a></li>
+                  <li class="my-3"><a href="#">Our Services</a></li>
+                  <li class="my-3"><a href="#">Our Mission</a></li>
+                  <li class="my-3"><a href="#">Our Team</a></li>
+                  <li class="my-3"><a href="#">Our Single</a></li>
+                  <li class="my-3"><a href="#">Taypography</a></li>
+                  <li class="my-3"><a href="#">Elements</a></li>
+                  <li class="my-3"><a href="#">FAQ'S</a></li>
+                  <li class="my-3"><a href="#"> Coming Soon</a></li>
+                  <li class="my-3"><a href="#"> Pages 404</a></li>
+                </ul>
+              </div>
+            </li>
             <li class="mx-6 text-sm"><a href="#"
-                class="text-white flex items-center tracking-widest hover:text-orange-500"><span
-                  class="w-1.5 h-1.5 border border-white rounded-full mr-2"></span> PAGES<i
-                  class="ri-arrow-down-s-line ml-1"></i></a></li>
-            <li class="mx-6 text-sm"><a href="#"
-                class="text-white flex items-center tracking-widest hover:text-orange-500"><span
+                class="text-white flex items-center tracking-widest py-5 hover:text-orange-500"><span
                   class="w-1.5 h-1.5 border border-white rounded-full mr-2"></span> BLOG<i
                   class="ri-arrow-down-s-line ml-1"></i></a></li>
             <li class="mx-6 text-sm"><a href="#"
-                class="text-white flex items-center tracking-widest hover:text-orange-500"><span
+                class="text-white flex items-center tracking-widest py-5 hover:text-orange-500"><span
                   class="w-1.5 h-1.5 border border-white rounded-full mr-2"></span> PORTFOLIO<i
                   class="ri-arrow-down-s-line ml-1"></i></a></li>
-            <li class="mx-6 text-sm"><a href="#"
-                class="text-white flex items-center tracking-widest hover:text-orange-500"><span
+            <li class="mx-6 text-sm relative dropdown"><a href="#"
+                class="text-white flex items-center tracking-widest py-5 hover:text-orange-500"><span
                   class="w-1.5 h-1.5 border border-white rounded-full mr-2"></span> SHOP<i
-                  class="ri-arrow-down-s-line ml-1"></i></a></li>
+                  class="ri-arrow-down-s-line ml-1"></i></a>
+                  <div class="dropdown-menu absolute top-full left-0 bg-black text-white w-[200px] p-3 opacity-0 duration-500 invisible translate-y-[20px] rounded-lg">
+                    <ul>
+                      <li class="my-3"><a href="#">Products Grid</a></li>
+                      <li class="my-3"><a href="#">Single Products</a></li>
+                      <li class="my-3"><a href="#">Cart</a></li>
+                      <li class="my-3"><a href="#">Checkout</a></li>
+                    </ul>
+                  </div>
+                </li>
             <li class="mx-6 text-sm"><a href="#"
-                class="text-white flex items-center tracking-widest hover:text-orange-500"><span
+                class="text-white flex items-center tracking-widest py-5 hover:text-orange-500"><span
                   class="w-1.5 h-1.5 border border-white rounded-full mr-2"></span> CONTACTS<i
                   class="ri-arrow-down-s-line ml-1"></i></a></li>
           </ul>
         </nav>
         <div class="flex">
-          <i class="text-white text-xl mr-8 ri-shopping-cart-2-line"></i>
-          <i class="text-white text-xl mr-8 ri-search-line"></i>
-          <i class="text-white text-xl mr-8 ri-menu-line"></i>
+          <a href="#"><i class="text-white text-xl mr-8 ri-shopping-cart-2-line"></i></a>
+          <a href="#"><i class="text-white text-xl mr-8 ri-search-line"></i></a>
+          <a href="#" class="toggle bock xl:hidden"><i class="text-white text-xl mr-8 ri-menu-line"></i></a>
         </div>
       </div>
     </div>
   </header>
 
   <main>
+    
     <!-- BANNER -->
-    <section class="bg-[url('images/banner.jpg')] w-full h-[900px] flex items-center justify-center relative">
+    <section class="bg-[url('images/banner.jpg')] bg-cover w-full h-[900px] flex items-center justify-center relative">
       <div class="text-center">
-        <h2 class="text-white text-[150px] font-bold">Develop</h2>
+        <h2 class="text-white text-[70px] sm:text-[100px] lg:text-[150px]  font-bold">Develop</h2>
         <div class="flex items-center">
-          <h2 class="text-[150px] text-white font-bold">the Digital</h2>
-          <p class="text-white w-[410px] ml-10 text-justify">With every single one of our clients, we bring forth a deep
+          <h2 class="text-[70px] sm:text-[100px] lg:text-[150px] text-white font-bold">the Digital</h2>
+          <p class="text-white w-[410px] ml-10 text-justify hidden xl:block">With every single one of our clients, we
+            bring forth a deep
             passion for creative problem solving we bring forth a deep passion for creative problem solving <br /> —
             which is what we deliver.</p>
         </div>
-        <h2 class="text-white text-[150px] font-bold">Universe</h2>
+        <h2 class="text-white text-[70px] sm:text-[100px] lg:text-[150px] font-bold">Universe</h2>
       </div>
-      <div class="social relative top-0 left-[250px]">
+      <!-- <div class="social relative top-0 left-[250px] hidden xl:block">
         <a href="javascript:void(0)" class="text-white block mt-20">bili@mail.com</a>
         <a href="javascript:void(0)" class="text-white block mt-20">+1 800 123 456 78</a>
-      </div>
+      </div> -->
       <div class="absolute bottom-20 left-20 z-50">
         <a href="#" class="text-white bg-transpernt p-3 rounded-full hover">GET IN TOUCH</a>
       </div>
     </section>
 
     <!-- OFFER -->
-    <section class="py-20">
+    <section class="py-20 bg-zinc-900">
       <div class="container mx-auto">
-         <div class="grid grid-cols-2">
+        <div class="grid grid-cols-1  lg:grid-cols-2 flex items-center">
           <div>
-            <h4 class="text-sm text-gray-300 ">WHAT WE OFFER</h4>
-            <h2 class="text-white text-4xl mt-4">Unlock Revenue Growth <br/>for Your Business</h2>
+            <h4 class="text-sm text-gray-400 ">WHAT WE OFFER</h4>
+            <h2 class="text-white text-4xl mt-4 mb-10 xl:mb-0">Unlock Revenue Growth <br />for Your Business</h2>
           </div>
-          <div>
-            <a href="#" class="text-white bg-transpernt p-3 rounded-full hover">GET IN TOUCH</a>
+          <div class="flex lg:justify-center">
+            <div class="absolute z-50">
+              <a href="#" class="text-white bg-transpernt p-3 rounded-full hover">VIEW ALL SERVICES</a>
+            </div>
           </div>
-         </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 mt-10">
+          <div class="offer-item sm:mr-5 sm:mt-5 xl:mr-10 relative">
+            <img src="images/1.jpg" alt="" width="100%" class="hover:grayscale ">
+            <h2
+              class="text-white absolute top-[50%] left-[50%] translate-x-[-50%] text-2xl md:text-3xl xl:text-4xl text-center">
+              Mobile Solutions</h2>
+          </div>
+          <div class="offer-item sm:mr-5 sm:mt-5 xl:mr-10 relative">
+            <img src="images/2.jpg" alt="" width="100%" class="hover:grayscale ">
+            <h2
+              class="text-white absolute top-[50%] left-[50%] translate-x-[-50%] text-2xl md:text-3xl xl:text-4xl text-center">
+              Mobile Solutions</h2>
+          </div>
+          <div class="offer-item sm:mr-5 sm:mt-5 xl:mr-10 relative">
+            <img src="images/3.jpg" alt="" width="100%" class="hover:grayscale ">
+            <h2
+              class="text-white absolute top-[50%] left-[50%] translate-x-[-50%] text-2xl md:text-3xl xl:text-4xl text-center">
+              Mobile Solutions</h2>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- LOGO -->
+    <section class="our py-20 bg-zinc-900">
+      <div class="container mx-auto">
+        <p class="text-grey font-bold text-lg text-center mb-20">OVER 1K+ SOFTWARE BUSINESSES GROWING WITH BILI</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 text-center items-center">
+          <div class="mt-5 xl:mt-0">
+            <img src="images/l1.png" alt="" width="50px" class="inline grayscale hover:grayscale-0 duration-500">
+          </div>
+          <div class="mt-5 xl:mt-0">
+            <img src="images/l2.png" alt="" width="50px" class="inline grayscale hover:grayscale-0 duration-500">
+          </div>
+          <div class="mt-5 xl:mt-0">
+            <img src="images/l3.png" alt="" width="50px" class="inline grayscale hover:grayscale-0 duration-500">
+          </div>
+          <div class="mt-5 xl:mt-0">
+            <img src="images/l4.png" alt="" width="50px" class="inline grayscale hover:grayscale-0 duration-500">
+          </div>
+          <div class="mt-5 xl:mt-0">
+            <img src="images/l5.png" alt="" width="50px" class="inline grayscale hover:grayscale-0 duration-500">
+          </div>
+          <div class="mt-5 xl:mt-0">
+            <img src="images/l6.png" alt="" width="50px" class="inline grayscale hover:grayscale-0 duration-500">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HEDLINE -->
+    <section class="pb-20 overflow-hidden bg-zinc-900">
+      <div class="text-white text-9xl whitespace-nowrap move font-bold">Web Development _ UI/UX _ Branding Strategy _
+        Photography Web Development _ UI/UX _ Branding Strategy _ Photography</div>
+      <div class="text-9xl whitespace-nowrap strok font-bold mt-10">Web Development _ UI/UX _ Branding Strategy _
+        Photography Web Development _ UI/UX _ Branding Strategy _ Photography</div>
+    </section>
+
+    <!-- AWARDS -->
+    <section class="py-20 bg-zinc-900">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1  lg:grid-cols-2 flex items-center mb-20">
+          <div>
+            <h4 class="text-sm text-gray-400 ">WE PROUD THAT</h4>
+            <h2 class="text-white text-4xl mt-4 mb-10 xl:mb-0">Discover Our Awards</h2>
+          </div>
+          <div class="flex lg:justify-center">
+            <div class="absolute z-50">
+              <a href="#" class="text-white bg-transpernt p-3 rounded-full hover">VIEW ALL AWARDS</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide text-white">
+              <div>
+                <h2 class="text-orange-500 text-3xl mb-5">2015</h2>
+                <h2 class="text-2xl font-bold">Awwwards</h2>
+                <p class="text-grey my-5">White of the day</p>
+                <p class="text-grey my-5">Mobile exelence</p>
+                <h2 class="text-2xl font-bold">CSS Design Awards</h2>
+                <p class="text-grey my-5">Honorable mention</p>
+              </div>
+            </div>
+            <div class="swiper-slide text-white">
+              <div>
+                <h2 class="text-orange-500 text-3xl mb-5">2015</h2>
+                <h2 class="text-2xl font-bold">Awwwards</h2>
+                <p class="text-grey my-5">White of the day</p>
+                <p class="text-grey my-5">Mobile exelence</p>
+                <h2 class="text-2xl font-bold">CSS Design Awards</h2>
+                <p class="text-grey my-5">Honorable mention</p>
+              </div>
+            </div>
+            <div class="swiper-slide text-white">
+              <div>
+                <h2 class="text-orange-500 text-3xl mb-5">2015</h2>
+                <h2 class="text-2xl font-bold">Awwwards</h2>
+                <p class="text-grey my-5">White of the day</p>
+                <p class="text-grey my-5">Mobile exelence</p>
+                <h2 class="text-2xl font-bold">CSS Design Awards</h2>
+                <p class="text-grey my-5">Honorable mention</p>
+              </div>
+            </div>
+            <div class="swiper-slide text-white">
+              <div>
+                <h2 class="text-orange-500 text-3xl mb-5">2015</h2>
+                <h2 class="text-2xl font-bold">Awwwards</h2>
+                <p class="text-grey my-5">White of the day</p>
+                <p class="text-grey my-5">Mobile exelence</p>
+                <h2 class="text-2xl font-bold">CSS Design Awards</h2>
+                <p class="text-grey my-5">Honorable mention</p>
+              </div>
+            </div>
+            <div class="swiper-slide text-white">
+              <div>
+                <h2 class="text-orange-500 text-3xl mb-5">2015</h2>
+                <h2 class="text-2xl font-bold">Awwwards</h2>
+                <p class="text-grey my-5">White of the day</p>
+                <p class="text-grey my-5">Mobile exelence</p>
+                <h2 class="text-2xl font-bold">CSS Design Awards</h2>
+                <p class="text-grey my-5">Honorable mention</p>
+              </div>
+            </div>
+            <div class="swiper-slide text-white">
+              <div>
+                <h2 class="text-orange-500 text-3xl mb-5">2015</h2>
+                <h2 class="text-2xl font-bold">Awwwards</h2>
+                <p class="text-grey my-5">White of the day</p>
+                <p class="text-grey my-5">Mobile exelence</p>
+                <h2 class="text-2xl font-bold">CSS Design Awards</h2>
+                <p class="text-grey my-5">Honorable mention</p>
+              </div>
+            </div>
+            <div class="swiper-slide text-white">
+              <div>
+                <h2 class="text-orange-500 text-3xl mb-5">2015</h2>
+                <h2 class="text-2xl font-bold">Awwwards</h2>
+                <p class="text-grey my-5">White of the day</p>
+                <p class="text-grey my-5">Mobile exelence</p>
+                <h2 class="text-2xl font-bold">CSS Design Awards</h2>
+                <p class="text-grey my-5">Honorable mention</p>
+              </div>
+            </div>
+            <div class="swiper-slide text-white">
+              <div>
+                <h2 class="text-orange-500 text-3xl mb-5">2015</h2>
+                <h2 class="text-2xl font-bold">Awwwards</h2>
+                <p class="text-grey my-5">White of the day</p>
+                <p class="text-grey my-5">Mobile exelence</p>
+                <h2 class="text-2xl font-bold">CSS Design Awards</h2>
+                <p class="text-grey my-5">Honorable mention</p>
+              </div>
+            </div>
+            <div class="swiper-slide text-white">
+              <div>
+                <h2 class="text-orange-500 text-3xl mb-5">2015</h2>
+                <h2 class="text-2xl font-bold">Awwwards</h2>
+                <p class="text-grey my-5">White of the day</p>
+                <p class="text-grey my-5">Mobile exelence</p>
+                <h2 class="text-2xl font-bold">CSS Design Awards</h2>
+                <p class="text-grey my-5">Honorable mention</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="py-20 bg-zinc-900">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1  lg:grid-cols-2 flex items-center mb-20">
+          <div>
+            <h4 class="text-sm text-gray-400 ">WE PROUD THAT</h4>
+            <h2 class="text-white text-4xl mt-4 mb-10 xl:mb-0">We Work to Craft Solid Products <br /> and Services For
+              You</h2>
+          </div>
+          <div class="flex lg:justify-center">
+            <div class="absolute z-50">
+              <a href="#" class="text-white bg-transpernt p-3 rounded-full hover">VIEW ALL AWARDS</a>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 items-center my-10">
+          <h2 class=" text-9xl font-bold text mr-20 text-center mb-10 sm:mb-0 hover:text-white duration-200">
+            01/
+          </h2>
+          <div class="text-center sm:text-left">
+            <a href="#" class="text-white text-xl">DEVELOPMENT | TECHNOLOGY</a>
+            <h2 class="mt-5"><a href="#" class="text-white text-5xl font-bold">Technology Process</a></h2>
+          </div>
+          <img src="images/p1.jpg" alt="" class="hidden xl:block" width="300px">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 items-center my-10">
+          <h2 class=" text-9xl font-bold text mr-20 text-center mb-10 sm:mb-0 hover:text-white duration-200">
+            02/
+          </h2>
+          <div class="text-center sm:text-left">
+            <a href="#" class="text-white text-xl">DEVELOPMENT | TECHNOLOGY</a>
+            <h2 class="mt-5"><a href="#" class="text-white text-5xl font-bold">Technology Process</a></h2>
+          </div>
+          <img src="images/p2.jpg" alt="" class="hidden xl:block" width="300px">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 items-center my-10">
+          <h2 class=" text-9xl font-bold text mr-20 text-center mb-10 sm:mb-0 hover:text-white duration-200">
+            03/
+          </h2>
+          <div class="text-center sm:text-left">
+            <a href="#" class="text-white text-xl">DEVELOPMENT | TECHNOLOGY</a>
+            <h2 class="mt-5"><a href="#" class="text-white text-5xl font-bold">Technology Process</a></h2>
+          </div>
+          <img src="images/p3.jpg" alt="" class="hidden xl:block" width="300px">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 items-center my-10">
+          <h2 class=" text-9xl font-bold text mr-20 text-center mb-10 sm:mb-0 hover:text-white duration-200">
+            04/
+          </h2>
+          <div class="text-center sm:text-left">
+            <a href="#" class="text-white text-xl">DEVELOPMENT | TECHNOLOGY</a>
+            <h2 class="mt-5"><a href="#" class="text-white text-5xl font-bold">Technology Process</a></h2>
+          </div>
+          <img src="images/p4.jpg" alt="" class="hidden xl:block" width="300px">
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTMONIAL -->
+    <section class="py-20 bg-black">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1  lg:grid-cols-2 flex items-center mb-20">
+          <div>
+            <h4 class="text-sm text-gray-400 ">MEET OUR PROFESSIONALS</h4>
+            <h2 class="text-white text-4xl mt-4 mb-10 xl:mb-0">Team that Builds Ideas Driven by the Future</h2>
+          </div>
+          <div class="flex lg:justify-center">
+            <div class="absolute z-50">
+              <a href="#" class="text-white bg-transpernt p-3 rounded-full hover">VIEW ALL AWARDS</a>
+            </div>
+          </div>
+        </div>
+        <div class="responsive">
+          <div class="mx-8">
+            <img src="images/t1.jpg" alt="" class="hover:brightness-50 duration-700">
+            <h2 class="text-white text-xl font-bold my-2">Harry Newman</h2>
+            <p class="text-gray-400">Frontend Developer</p>
+          </div>
+          <div class="mx-8">
+            <img src="images/t2.jpg" alt="" class="hover:brightness-50 duration-700">
+            <h2 class="text-white text-xl font-bold my-2">Harry Newman</h2>
+            <p class="text-gray-400">Frontend Developer</p>
+          </div>
+          <div class="mx-8">
+            <img src="images/t3.jpg" alt="" class="hover:brightness-50 duration-700">
+            <h2 class="text-white text-xl font-bold my-2">Harry Newman</h2>
+            <p class="text-gray-400">Frontend Developer</p>
+          </div>
+          <div class="mx-8">
+            <img src="images/t4.jpg" alt="" class="hover:brightness-50 duration-700">
+            <h2 class="text-white text-xl font-bold my-2">Harry Newman</h2>
+            <p class="text-gray-400">Frontend Developer</p>
+          </div>
+          <div class="mx-8">
+            <img src="images/t5.jpg" alt="" class="hover:brightness-50 duration-700">
+            <h2 class="text-white text-xl font-bold my-2">Harry Newman</h2>
+            <p class="text-gray-400">Frontend Developer</p>
+          </div>
+          <div class="mx-8">
+            <img src="images/t1.jpg" alt="" class="hover:brightness-50 duration-700">
+            <h2 class="text-white text-xl font-bold my-2">Harry Newman</h2>
+            <p class="text-gray-400">Frontend Developer</p>
+          </div>
+          <div class="mx-8">
+            <img src="images/t2.jpg" alt="" class="hover:brightness-50 duration-700">
+            <h2 class="text-white text-xl font-bold my-2">Harry Newman</h2>
+            <p class="text-gray-400">Frontend Developer</p>
+          </div>
+          <div class="mx-8">
+            <img src="images/t3.jpg" alt="" class="hover:brightness-50 duration-700">
+            <h2 class="text-white text-xl font-bold my-2">Harry Newman</h2>
+            <p class="text-gray-400">Frontend Developer</p>
+          </div>
+          <div class="mx-8">
+            <img src="images/t4.jpg" alt="" class="hover:brightness-50 duration-700">
+            <h2 class="text-white text-xl font-bold my-2">Harry Newman</h2>
+            <p class="text-gray-400">Frontend Developer</p>
+          </div>
+          <div class="mx-8">
+            <img src="images/t5.jpg" alt="" class="hover:brightness-50 duration-700">
+            <h2 class="text-white text-xl font-bold my-2">Harry Newman</h2>
+            <p class="text-gray-400">Frontend Developer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNT -->
+    <section class="py-20 bg-zinc-900">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 justify-center">
+          <div class="flex items-center justify-center">
+            <h2 class="count mr-5 text-8xl font-bold text">10</h2>
+            <p class="text-white text-lg font-bold">Years of <br> Experience</p>
+          </div>
+          <div class="flex items-center justify-center">
+            <h2 class="count mr-5 text-8xl font-bold text">18</h2>
+            <p class="text-white text-lg font-bold">Skilled <br> Professionals</p>
+          </div>
+          <div class="flex items-center justify-center">
+            <h2 class="count mr-5 text-8xl font-bold text">32</h2>
+            <p class="text-white text-lg font-bold">Visited <br> Conferences</p>
+          </div>
+          <div class="flex items-center justify-center">
+            <h2 class="count mr-5 text-8xl font-bold text">20</h2>
+            <p class="text-white text-lg font-bold">Projects <br> Worldwide</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEW -->
+    <section class="py-20 md:py-40  bg-zinc-900">
+      <div class="container mx-auto">
+        <div class="owl-carousel owl-theme">
+          <div class="item text-white flex items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+              <div class="text-center md:border-r-2 md:border-Gray-300 md:border-solid ">
+                <img src="images/r1.jpg" alt="" style="width:150px !important; display: inline !important;"
+                  class="rounded-full">
+                <h2 class="text-white text-xl mt-5 mb-2">Monica Regan</h2>
+                <h3 class="text-orange-500">CLIENT OF AGENCY</h3>
+              </div>
+              <div class="ml-10 mt-10 md:mt-0">
+                <p class="text-white text-xl md:text-3xl leading-relaxed">“Our office is something we are pleased with. We consider
+                  it the little magnet; it is wanting to come here and afterward difficult to leave it. Our office is
+                  additionally a big name.”</p>
+              </div>
+            </div>
+          </div>
+          <div class="item text-white flex items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+              <div class="text-center md:border-r-2 md:border-Gray-300 md:border-solid ">
+                <img src="images/r2.jpg" alt="" style="width:150px !important; display: inline !important;"
+                  class="rounded-full">
+                <h2 class="text-white text-xl mt-5 mb-2">Monica Regan</h2>
+                <h3 class="text-orange-500">CLIENT OF AGENCY</h3>
+              </div>
+              <div class="ml-10 mt-10 md:mt-0">
+                <p class="text-white text-xl md:text-3xl leading-relaxed">“Our office is something we are pleased with. We consider
+                  it the little magnet; it is wanting to come here and afterward difficult to leave it. Our office is
+                  additionally a big name.”</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TITLE -->
+    <section class="py-20 bg-zinc-900">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1  lg:grid-cols-2 flex items-center">
+          <div>
+            <h2 class="text-7xl md:text-9xl font-bold text-white text-center">Get in <span
+                class="text-7xl md:text-9xl font-bold text">Touch</span></h2>
+          </div>
+          <div class="flex justify-center mt-5">
+            <div class="absolute z-50">
+              <a href="#" class="text-white bg-transpernt p-3 rounded-full hover">VIEW ALL SERVICES</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- FOOTER  -->
+  <footer class="pt-20 bg-black">
+    <div class="container mx-auto">
+      <div class="grid md:grid-cols-2 xl:grid-cols-4 ">
+        <div>
+          <img src="images/logo-1.png" alt="">
+        </div>
+        <div class="text-white">
+          <h2 class="text-3xl font-bold mb-7">Services</h2>
+          <ul>
+            <li class="mb-5"><a href="#" class="text-xl">UI/UX Expriance</a></li>
+            <li class="mb-5"><a href="#" class="text-xl">Digital Marketing</a></li>
+            <li class="mb-5"><a href="#" class="text-xl">Web Development</a></li>
+            <li class="mb-5"><a href="#" class="text-xl">Products Design</a></li>
+          </ul>
+        </div>
+        <div class="text-white">
+          <h2 class="text-3xl font-bold mb-7">Services</h2>
+          <ul>
+            <li class="mb-5"><a href="#" class="text-xl">UI/UX Expriance</a></li>
+            <li class="mb-5"><a href="#" class="text-xl">Digital Marketing</a></li>
+            <li class="mb-5"><a href="#" class="text-xl">Web Development</a></li>
+            <li class="mb-5"><a href="#" class="text-xl">Products Design</a></li>
+          </ul>
+        </div>
+        <div class="text-white mb-5">
+          <h2 class="text-3xl font-bold mb-7">Subscribe</h2>
+          <input type="text" class="outline-0 bg-transparent text-white border-b-[1px] border-slate-200 py-2 w-full" placeholder="GET NEW & UPDATES">
+          <p class="text-grey my-4">Our expertise, as well as our passion for web design, sets us apart from other agencies.</p>
+          <div>
+            <i class="mx-2 ri-twitter-fill"></i>
+            <i class="mx-2 ri-facebook-fill"></i>
+            <i class="mx-2 ri-instagram-line"></i>
+            <i class="mx-2 ri-linkedin-fill"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" border-t-2 border-grey py-10">
+      <p class="text-grey text-center">Copyright © 2022 Bili by WebGeniusLab.❤ All Rights Reserved</p>
+    </div>
+  </footer>
 
 
-
-
-
-
-
-
-
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="js/config.js" type="text/javascript"></script>
 </body>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/slick.min.js" type="text/javascript"></script>
+<script src="js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.0/swiper-bundle.min.js"
+  integrity="sha512-sR63/L3Slqn0OWMMafv7gmRGxkYJOcfgdN3jznwea9NYiett6R+cGdZ0t0TRHeH1gZogMyLE1oQpQ0Lc6ULKbg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/config.js" type="text/javascript"></script>
+<script>
+  $(document).ready(function(){
+    $('.toggle').click(function(){
+      $('nav').slideToggle();
+    });
+  });
+  $('.responsive').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+  // counter
+  $(document).ready(function () {
 
+    var counters = $(".count");
+    var countersQuantity = counters.length;
+    var counter = [];
+
+    for (i = 0; i < countersQuantity; i++) {
+      counter[i] = parseInt(counters[i].innerHTML);
+    }
+
+    var count = function (start, value, id) {
+      var localStart = start;
+      setInterval(function () {
+        if (localStart < value) {
+          localStart++;
+          counters[id].innerHTML = localStart;
+        }
+      }, 40);
+    }
+
+    for (j = 0; j < countersQuantity; j++) {
+      count(0, counter[j], j);
+    }
+  });
+  // owal
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 1
+      }
+    }
+  })
+  // swiper 
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    freeMode: true,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+    autoplay: {
+      delay: 2000,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      400: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      600: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      800: {
+        slidesPerView: 4,
+        spaceBetween: 40
+      }
+    }
+  });
+</script>
 </html>
